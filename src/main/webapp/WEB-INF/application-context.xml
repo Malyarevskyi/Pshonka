@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd"
+       default-autowire="byName">
+
+    <bean id="initService" class="com.goitrestaurant.InitDB" init-method="init"/>
+
+    <bean id="positionService" class="com.goitrestaurant.service.PositionService"/>
+    <bean id="positionDao" class="com.goitrestaurant.dao.hibernate.HPositionDao"/>
+
+    <bean id="employeeService" class="com.goitrestaurant.service.EmployeeService"/>
+    <bean id="employeeDao" class="com.goitrestaurant.dao.hibernate.HEmployeeDao"/>
+
+    <bean id="ingredientService" class="com.goitrestaurant.service.IngredientService"/>
+    <bean id="ingredientDao" class="com.goitrestaurant.dao.hibernate.HIngredientDao"/>
+
+    <bean id="categoryService" class="com.goitrestaurant.service.CategoryService"/>
+    <bean id="categoryDao" class="com.goitrestaurant.dao.hibernate.HCategoryDao"/>
+
+    <bean id="warehouseService" class="com.goitrestaurant.service.WarehouseService"/>
+    <bean id="warehouseDao" class="com.goitrestaurant.dao.hibernate.HWarehouseDao"/>
+
+    <bean id="deskService" class="com.goitrestaurant.service.DeskService"/>
+    <bean id="deskDao" class="com.goitrestaurant.dao.hibernate.HDeskDao"/>
+
+    <bean id="menuService" class="com.goitrestaurant.service.MenuService"/>
+    <bean id="menuDao" class="com.goitrestaurant.dao.hibernate.HMenuDao"/>
+
+    <bean id="dishService" class="com.goitrestaurant.service.DishService"/>
+    <bean id="dishDao" class="com.goitrestaurant.dao.hibernate.HDishDao"/>
+
+    <bean id="orderService" class="com.goitrestaurant.service.OrdersService"/>
+    <bean id="orderDao" class="com.goitrestaurant.dao.hibernate.HOrderDao"/>
+
+    <bean id="dishesPreparationService" class="com.goitrestaurant.service.DishesPreparationService"/>
+    <bean id="dishesPreparationDao" class="com.goitrestaurant.dao.hibernate.HDishesPreparationDao"/>
+
+</beans>
